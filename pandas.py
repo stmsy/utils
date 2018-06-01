@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import pandas as pd
+
 
 def categorize_df(df, target, predictor):
     """Categorize the DataFrame object so that column represents the values of 
