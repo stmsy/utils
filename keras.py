@@ -4,7 +4,7 @@ from keras.layers import Lambda, concatenate
 from keras import Model
 import tensorflow as tf
 
-# The following patch for the use of multiple core GPUs was provided by Maxim
+# The following patch for the use of multiple GPUs was provided by Maxim.
 # https://stackoverflow.com/questions/47210811/can-not-save-model-using-model-save-following-multi-gpu-model-in-keras/48066771#48066771
 
 
