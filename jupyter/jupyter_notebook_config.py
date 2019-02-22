@@ -568,7 +568,7 @@ c.KernelManager.autorestart = True
 #c.Session.unpacker = 'json'
 
 ## Username for the Session. Default is your system username.
-c.Session.username = f'{USERNAME}'
+c.Session.username = USERNAME
 
 #------------------------------------------------------------------------------
 # MultiKernelManager(LoggingConfigurable) configuration
