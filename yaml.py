@@ -15,7 +15,7 @@ def load_yaml(filepath):
         try:
             with filepath.open('r') as f:
                 return yaml.load(f)
-        raise:
-            Exception("YAML file load failed")
+        except:
+            raise Exception("YAML file load failed")
     else:
         raise Exception(YAML_LOAD_ERROR_MESSAGE)
