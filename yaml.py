@@ -2,11 +2,8 @@
 
 import yaml
 
-from settings import LOAD_ERROR_MESSAGE
-
-
 YAML_EXTS = ['.yaml', '.yml']
-YAML_LOAD_ERROR_MESSAGE = LOAD_ERROR_MESSAGE("YAML")
+LOAD_ERROR_MESSAGE = "file must be in YAML format"
 
 
 def load_yaml(filepath):
