@@ -5,7 +5,7 @@ import pandas as pd
 
 def categorize_df(df, target, predictor):
     """Categorize the DataFrame object so that column represents the values of 
-    predictor (categorical) with entries from target values (numerical)
+    predictor (categorical) with entries from target values (numerical).
 
     Arguments:
       df (pandas.DataFrame): the DataFrame object containing categorical 
