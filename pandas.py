@@ -26,3 +26,34 @@ def categorize_df(df, target, predictor):
     for column in columns:
         df_cated[column] = df_groupby.loc[column]
     return df_cated
+
+
+def is_na_contained(df):
+    """Check whether the DataFrame object contains a missing value.
+
+    Argument:
+      df (pandas.DataFrame): the DataFrame object to be checked whether it 
+                             contains a missing value
+
+    Return:
+      True/False (boolean): True if the DataFrame object contains at least
+                            one missing value, False elsewhere
+    """
+    return any(df.isna().any().values)
+
+
+def are_na_contained(df):
+    """Check whether the columns of the DataFrame object contain missing the 
+    values.
+
+    Arguement:
+      df (pandas.DataFrame): the DataFrame object to be checked whether its 
+                             columns contain the missing values
+
+    Return:
+      sr_na_test_results (pandas.Series): the Series object whose values are 
+                                          True or False depending on the 
+                                          missing value test
+    """
+    sr_na_test_results = df.isna().any()
+    return sr_na_test_results
