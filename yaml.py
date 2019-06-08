@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 
+from pathlib import Path
+
 import yaml
 
 YAML_EXTS = ['.yaml', '.yml']
 YAML_LOAD_ERROR_MESSAGE = "file must be in YAML format"
 
 
-def load_yaml(filepath):
+def load_yaml(filepath: Path) -> dict:
     """Load the YAML file and return as the Python dictionary."""
     if filepath.suffix in YAML_EXTS:
         try:

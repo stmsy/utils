@@ -1,17 +1,18 @@
 #!/usr/bin/env python
 
 import numpy as np
+import pandas as pd
 
 
-def corr_ratio(df):
+def corr_ratio(df: pd.DataFrame) -> np.float64:
     """Compute correlation ratio between categorical and numerical data.
 
     Argument:
-      df (DataFrame): DataFrame object containing categorical values as 
-                      columns and numerical values as rows
+      df: DataFrame object containing categorical values as columns and
+          numerical values as rows
 
     Return:
-      ratio (np.float64): correlation ratio
+      ratio: correlation ratio
     """
     # in-class variance
     ssw = ((df - df.mean()) ** 2).sum().sum()
