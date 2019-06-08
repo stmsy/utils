@@ -3,7 +3,8 @@
 import pandas as pd
 
 
-def categorize_df(df: pd.DataFrame, target: str, predictor: str) -> pd.DataFrame:
+def categorize_df(df: pd.DataFrame, target: str,
+                  predictor: str) -> pd.DataFrame:
     """Categorize the DataFrame object so that column represents the values of
     predictor (categorical) with entries from target values (numerical).
 
@@ -15,8 +16,8 @@ def categorize_df(df: pd.DataFrame, target: str, predictor: str) -> pd.DataFrame
       predictor: predictor variable whose values correspond to the column names
 
     Return:
-      df_cated (pandas.DataFrame): the DataFrame object with predictor values
-                                   as column names and
+      df_cated: the DataFrame object with predictor values as column names and
+                target values as its entries
     """
     df_groupby = df.copy().groupby(predictor)[target].apply(
         lambda df: df.reset_index(drop=True)).unstack()
@@ -43,7 +44,8 @@ def is_na_contained(df: pd.DataFrame) -> bool:
     """Check whether the DataFrame object contains a missing value.
 
     Argument:
-      df: the DataFrame object to be checked whether it contains a missing value
+      df: the DataFrame object to be checked whether it contains a missing
+          value
 
     Return:
       True/False: True if the DataFrame object contains at least one missing
