@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 
-def get_num_bins(num_samples: int, method: str = 'sturges') -> int
+def get_num_bins(num_samples: int, method: str = 'sturges') -> int:
     """Get the number of bins to plot a histogram calculated from the specified
     definition.
     """
