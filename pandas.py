@@ -1,6 +1,15 @@
 #!/usr/bin/env python
 
+import numpy as np
 import pandas as pd
+
+
+def get_num_bins(num_samples: int, method: str = 'sturges') -> int
+    """Get the number of bins to plot a histogram calculated from the specified
+    definition.
+    """
+    num_bins = {'sturges': int(np.log2(num_samples)) + 2}
+    return num_bins[method]
 
 
 def categorize_df(df: pd.DataFrame, target: str,
