@@ -64,7 +64,7 @@ def is_na_contained(df: pd.DataFrame) -> bool:
 
 
 def are_na_contained(df: pd.DataFrame) -> pd.Series:
-    """Check whether the columns of the DataFrame object contain missing the
+    """Check whether the columns of the DataFrame object contain missing
     values.
 
     Arguement:
