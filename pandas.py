@@ -43,6 +43,7 @@ def get_num_nan_rows(df: pd.DataFrame) -> int:
     Argument:
       df: the DataFrame object to get the number of rows filled with missing
           values
+
     Return:
       _: the number of rows filled with missing values
     """
@@ -63,7 +64,7 @@ def is_na_contained(df: pd.DataFrame) -> bool:
     return any(df.isna().any().values)
 
 
-def are_na_contained(df: pd.DataFrame) -> pd.Series:
+def check_nan_columns(df: pd.DataFrame) -> pd.Series:
     """Check whether the columns of the DataFrame object contain missing
     values.
 
@@ -72,8 +73,7 @@ def are_na_contained(df: pd.DataFrame) -> pd.Series:
            missing values
 
     Return:
-      sr_na_test_results: the Series object whose values are True or False
-                          depending on the missing value test
+      _: the Series object whose values are True or False depending on the
+         missing value test
     """
-    sr_na_test_results = df.isna().any()
-    return sr_na_test_results
+    return df.isna().any()
