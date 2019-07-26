@@ -1,7 +1,16 @@
 #!/usr/bin/env python
 
+import pikcle
+
 import numpy as np
 import pandas as pd
+
+
+def load_pickle(filepath: Path) -> pd.DataFrame:
+    """Load growth/fields dataframe from serialized data."""
+    with filepath.open('rb') as f:
+        df = pickle.load(f)
+    return df
 
 
 def get_num_bins(num_samples: int, method: str = 'sturges') -> int:
